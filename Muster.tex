@@ -1,0 +1,63 @@
+%HEADER
+\def\subdoc{} \ifx \maindoc \subdoc \else \documentclass[]{article} \input{packages} \begin{document} \fi
+\pagestyle{fancy}
+
+%BEGIN CONTENT
+\section{Auswertung}
+
+\subsection{Subsection}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \ref{label1}
+\tabularnewline
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\textsuperscript{\cite{key}}
+
+\begin{equation}
+	a+b=c
+\label{label1}
+\end{equation} 
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{content/path}
+	\caption{caption}
+\label{label2}
+\end{figure}
+
+ 
+\begin{scheme}[H] 
+	\centerline{
+	\includegraphics[width=\textwidth]{content/path} 
+	}
+	\caption{caption}
+\label{label3}
+\end{scheme}
+
+
+\begin{table}[H]
+	\caption{caption}
+	\centerline{
+		\begin{tabular}{cc} \hline
+			a & b\\
+			\hline \hline 
+			a1 & b1\\
+			a2 & b2\\
+			\hline 
+		\end{tabular} 
+	}
+\label{label4}
+\end{table}
+
+
+%END CONTENT
+\ifx \maindoc \subdoc \else \end{document} \fi
